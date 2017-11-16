@@ -5,8 +5,92 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodingDojo3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="600" Width="800" DataContext="{Binding Mode=OneWay, Source={StaticResource Locator}}">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="150"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Border BorderBrush="red" BorderThickness="0.8" Grid.Column="0" Height="40" Margin="10" VerticalAlignment="Top" CornerRadius="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0" Source="/img/Warning-WF.png"  Margin="0 0 10 0" HorizontalAlignment="Right"  VerticalAlignment="Center" Height="38"/>
+                <TextBlock Grid.Column="1" Text="Überlauf Grauwasser" Foreground="LightGray" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+            </Grid>
+
+
+
+        </Border>
+
+        <Border BorderBrush="White" BorderThickness="0.6 0 0 0" Grid.Column="1"></Border>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="White" BorderThickness="0.6" Grid.Row="1" Grid.ColumnSpan="2" Width="140"  HorizontalAlignment="Center" VerticalAlignment="Bottom"></Border>
+
+            <Border BorderBrush="White" BorderThickness="0.6" Grid.Row="4" Grid.ColumnSpan="2" Width="140" HorizontalAlignment="Center" VerticalAlignment="Bottom"></Border>
+            <Border BorderBrush="White" BorderThickness="0.6" Grid.Row="6" Grid.ColumnSpan="2" Width="140" HorizontalAlignment="Center" VerticalAlignment="Bottom"></Border>
+            <Border BorderBrush="White" BorderThickness="0.6" Grid.Row="12" Grid.ColumnSpan="2" Width="140" HorizontalAlignment="Center" VerticalAlignment="Bottom"></Border>
+
+            <Image Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="/img/Cloud_sun02-WF.png"  Margin="0 0 0 0"  Height="30"/>
+            <Image Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="/img/Wind.png"  Margin="0 0 0 0"  Height="30"/>
+            <Image Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="/img/solar.png"  Margin="0 0 0 0"  Height="30"/>
+            <Image Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="/img/Man-01.png"  Margin="0 0 0 0"  Height="30"/>
+            <Image Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="/img/Lock-WF.png"  Margin="0 0 0 0"  Height="30"/>
+            <Image Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="/img/Mail-WF.png"  Margin="0 0 0 0"  Height="30"/>
+            <Image Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="/img/Tasks.png"  Margin="0 0 0 0"  Height="30"/>
+
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="20 °" Margin="10 0 0 0" Foreground="LightGray" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="12 km/h" Margin="10 0 0 0" Foreground="LightGray" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="3.545 W" Margin="10 0 0 0" Foreground="LightGray" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="0" Margin="10 0 0 0" Foreground="LightGray" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="OK" Margin="10 0 0 0" Foreground="LightGray" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1" Text="7" Margin="10 0 0 0" Foreground="LightGray" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="1" Text="4" Margin="10 0 0 0" Foreground="LightGray" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+
+            <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Grid.RowSpan="6" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Button Content="Übersicht" Background="Black" Foreground="White" Margin="5 5 5 10"/>
+                <Button Content="Räume" Background="Black" Foreground="White" Margin="5 0 5 10"/>
+                <Button Content="Geräte" Background="Black" Foreground="White" Margin="5 0 5 10"/>
+                <Button Content="Gebäude" Background="Black" Foreground="White" Margin="5 0 5 10"/>
+                <Button Content="Sicherheit" Background="Black" Foreground="White" Margin="5 0 5 10"/>
+                <Button Content="Multimedia" Background="Black" Foreground="White" Margin="5 0 5 10"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="13" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Image  Source="/img/Bell-WF.png"  Margin="0 0 0 0"  Height="30"/>
+                <Image  Source="/img/SpeakerDecrease-01.png"  Margin="0 0 0 0"  Height="30"/>
+                <TextBlock  Text="4" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+                <Image  Source="/img/SpeakerIncrease-02.png"  Margin="0 0 0 0"  Height="30"/>
+            </StackPanel>
+
+            <TextBlock Grid.Row="14" Grid.ColumnSpan="2" Text="12:34" Foreground="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="16"></TextBlock>
+        </Grid>
+
     </Grid>
 </Window>
