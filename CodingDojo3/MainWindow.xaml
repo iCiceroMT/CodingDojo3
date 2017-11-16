@@ -27,6 +27,21 @@
 
 
         </Border>
+        <StackPanel Grid.Row="1" Margin="0 60 0 0">
+            <Label Content="Aktoren" FontSize="20" Foreground="white"></Label>
+            <DataGrid Height="200" AutoGenerateColumns="False" IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Main.Data}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Tier 1" Binding="{Binding Katze}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Tier 2" Binding="{Binding Hund}"></DataGridTextColumn>
+                </DataGrid.Columns>
+                
+            </DataGrid>
+               
+            
+            <Label Content="Sensoren" FontSize="20" Foreground="white"></Label>
+            <DataGrid Height="200" AutoGenerateColumns="False"></DataGrid>
+        </StackPanel>
+        
 
         <Border BorderBrush="White" BorderThickness="0.6 0 0 0" Grid.Column="1"></Border>
         <Grid Grid.Column="1">

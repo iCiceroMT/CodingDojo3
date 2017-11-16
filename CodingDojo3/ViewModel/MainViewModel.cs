@@ -1,4 +1,5 @@
 using GalaSoft.MvvmLight;
+using System.Collections.ObjectModel;
 
 namespace CodingDojo3.ViewModel
 {
@@ -16,19 +17,13 @@ namespace CodingDojo3.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
-        /// <summary>
-        /// Initializes a new instance of the MainViewModel class.
-        /// </summary>
+
+        public ObservableCollection<ItemVM> Data { get; set; }
+
         public MainViewModel()
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            Data = new ObservableCollection<ItemVM>();
+           // Data.Add(new ItemVM());
         }
     }
 }
